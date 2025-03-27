@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Обратный звонок</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/layout.js" defer></script>
+    <script src="js/call.js" defer></script>
+
+    <!--  daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--  daisy ui  -->
+</head>
+<body class="bg-base-100 text-base-content">
+
+<!-- Включение шапки -->
+<div id="header"></div>
+<!-- Включение шапки -->
+
+<main class="container mx-auto p-10">
+
+    <div class="text-center">
+        <h1 class="text-3xl font-bold">Оставьте заявку на обратный звонок!</h1>
+
+        <p class="mt-4">
+            Хотите забронировать авто или задать вопросы? Оставьте свои данные, и мы обязательно перезвоним!
+        </p>
+    </div>
+
+    <form id="callback-form" class="space-y-6 mt-6" method="POST">
+        <div>
+            <label for="name" class="block text-lg font-semibold">Ваше имя</label>
+            <input type="text" id="name" class="input input-bordered w-full form-control" required maxlength="255" placeholder="Иван">
+            <div class="invalid-feedback">
+                Пожалуйста, введите ваше имя
+            </div>
+        </div>
+        <div>
+            <label for="phone" class="block text-lg font-semibold">Ваш телефон</label>
+            <input type="tel" id="phone" name="phone" class="input input-bordered w-full form-control"
+                   maxlength ="11"
+                   pattern="^\+?[0-9]{1,3}?[-.() ]?[0-9]{1,4}[-.() ]?[0-9]{1,4}[-.() ]?[0-9]{1,4}$"
+                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                   required
+                   placeholder="81112223344">
+            <div class="invalid-feedback">
+                Пожалуйста, введите номер в формате 8xxxZZZxxZZ
+            </div>
+        </div>
+        <div>
+            <label for="description" class="block text-lg font-semibold">Пожелания (не обязательно)</label>
+            <textarea id="description" class="textarea textarea-bordered w-full form-control" maxlength="2048"></textarea>
+        </div>
+        <button type="submit" id="submit-btn" class="btn btn-primary w-full" disabled>Отправить</button>
+    </form>
+</main>
+
+<!-- Включение подвала -->
+<div id="footer"></div>
+<!-- Включение подвала -->
+
+</body>
+</html>

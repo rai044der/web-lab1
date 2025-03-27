@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: business-card-service
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:business-card-service
+    username: test
+    password: test
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/db.changelog-master.xml
+    contexts: local
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+    show_sql: true
+    open-in-view: false
+
+logging:
+  level:
+    root: INFO
+    ru.abradox: DEBUG

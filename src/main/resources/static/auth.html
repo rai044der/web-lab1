@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вход в систему</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/layout.js" defer></script>
+
+    <!--  daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--  daisy ui  -->
+</head>
+
+<body class="bg-base-100 text-base-content">
+
+<!-- Включение шапки -->
+<div id="header"></div>
+<!-- Включение шапки -->
+
+<main class="flex justify-center min-h-screen container mx-auto text-center p-10">
+    <form method="post" action="/api/auth">
+        <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend text-3xl font-bold">Admin panel</legend>
+
+            <label for="username" class="fieldset-label">Username</label>
+            <input id="username" name="username" required type="text" class="input" placeholder="username"/>
+
+            <label for="password" class="fieldset-label">Password</label>
+            <input id="password" name="password" required type="password" class="input" placeholder="password"/>
+
+            <button type="submit" class="btn btn-neutral mt-4">Login</button>
+        </fieldset>
+    </form>
+</main>
+
+<!-- Включение подвала -->
+<div id="footer"></div>
+<!-- Включение подвала -->
+
+</body>
+</html>

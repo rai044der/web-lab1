@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
+
+    <changeSet id="add-units" author="abradox">
+
+        <insert tableName="unit">
+            <column name="external_id">ed2796b6-b125-49ff-b5b2-8d1cf649acf6</column>
+            <column name="name">Ford Focus</column>
+            <column name="photo_link">https://i.bstr.es/highmotor/2012/03/Ford_Focus_Sport_01-1220x915.jpg</column>
+            <column name="description">Не бита не крашена</column>
+        </insert>
+
+        <insert tableName="unit">
+            <column name="external_id">5a16e6ee-12bb-403c-b698-cff339d9e1a0</column>
+            <column name="name">Volkswagen Golf</column>
+            <column name="photo_link">https://avatars.mds.yandex.net/get-verba/1540742/2a0000018dcbeb94d837024256fb0e6c91f4/456x342</column>
+            <column name="description">Машина в идеальном состоянии. Салон чистый, без посторонних запахов. Все системы работают исправно. Пройдены все ТО вовремя.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">b0298cd8-4998-4629-84e1-a05cfff14671</column>
+            <column name="name">Toyota Corolla</column>
+            <column name="photo_link">https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/2020_Toyota_Corolla_LE_standard_front%2C_5.25.19.jpg/1200px-2020_Toyota_Corolla_LE_standard_front%2C_5.25.19.jpg</column>
+            <column name="description">Не было серьезных повреждений. Авто гаражного хранения. Своевременная замена масла и фильтров. Отлично подойдет для семейных поездок.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">c512fbda-8a1f-475e-b86f-2ea244f58b3b</column>
+            <column name="name">BMW 3 Series</column>
+            <column name="photo_link">https://avatars.mds.yandex.net/get-verba/1540742/2a00000180d7fa047e2e09e71e665301c310/cattouchret</column>
+            <column name="description">Современная модель с привлекательным дизайном. Автомобиль обслужен на официальном сервисе. Нет нареканий по ходовой части. Низкий пробег.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">d9f51305-e21b-47c2-b394-93f46e673845</column>
+            <column name="name">Mercedes-Benz C-Class</column>
+            <column name="photo_link">https://avatars.mds.yandex.net/get-verba/1540742/2a00000180d7fa047e2e09e71e665301c310/cattouchret</column>
+            <column name="description">Кожа в салоне в отличном состоянии. Все функции работают без сбоев. Надежный и экономичный вариант. Резина на всех колесах новая.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">6e485b48-fc0f-46bd-8d2f-30cf24abeae4</column>
+            <column name="name">Audi A4</column>
+            <column name="photo_link">https://upload.wikimedia.org/wikipedia/commons/3/35/Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg</column>
+            <column name="description">Машина в безупречном состоянии. Всего один владелец. Полный комплект ключей и документов. Очень плавный ход.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">ffd097fc-117a-4d6e-bd66-3ae7c55751c5</column>
+            <column name="name">Honda Civic</column>
+            <column name="photo_link">https://upload.wikimedia.org/wikipedia/commons/1/1a/Honda_Civic_e-HEV_Sport_%28XI%29_%E2%80%93_f_30062024.jpg</column>
+            <column name="description">Каждая система работает как часы. Салон в отличном состоянии. Подходит для городской езды и путешествий. Бонусом зимняя резина.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">79f2e636-4827-4346-bd17-ec2839b48173</column>
+            <column name="name">KIA Rio</column>
+            <column name="photo_link">https://upload.wikimedia.org/wikipedia/commons/8/89/Berline_Kia_Rio_2018_au_SIAM_2018.jpg</column>
+            <column name="description">Компактный городской автомобиль с низким расходом топлива. Недавно проведена диагностика. Без дополнительных вложений. Чистый и комфортный салон.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">f3fd37b7-9695-4719-8307-c290ec41079a</column>
+            <column name="name">Hyundai Elantra</column>
+            <column name="photo_link">https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Hyundai_Avante_CN7_white_%281%29_%28cropped%29.jpg/1200px-Hyundai_Avante_CN7_white_%281%29_%28cropped%29.jpg</column>
+            <column name="description">Машина идеально подходит для поездок на длинные дистанции. Двигатель тихий и мощный. Кондиционер и обогреватели работают отлично. Все документы в порядке.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">e2d7c9ea-0152-4056-88dc-1677b806b9cf</column>
+            <column name="name">Mazda 3</column>
+            <column name="photo_link">https://upload.wikimedia.org/wikipedia/commons/1/12/Mazda3_%28BP%29_X_e-Skyactiv-X_IMG_9015_%28edit_zm%29.jpg</column>
+            <column name="description">Вложений не требует, сел и поехал. Комфортный и стильный салон. Установлена качественная аудиосистема. Работает каждая кнопка.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">4b2e0060-c831-4389-b06b-ec4d156e800b</column>
+            <column name="name">Chevrolet Cruze</column>
+            <column name="photo_link">https://upload.wikimedia.org/wikipedia/commons/b/b4/2017_Chevrolet_Cruze_LT_in_Arctic_Blue_Metallic%2C_Front_Left.jpg</column>
+            <column name="description">Отличное сочетание цены и качества. Кузов в хорошем состоянии. Все узлы и агрегаты работают бесперебойно. Удобный и вместительный багажник.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">3ed6a60c-dc2f-4743-85da-4652903ec35c</column>
+            <column name="name">Nissan Qashqai</column>
+            <column name="photo_link">https://avatars.mds.yandex.net/get-verba/1030388/2a0000018eed19002e80e4d5cdc8e8736f39/cattouchret</column>
+            <column name="description">Никаких проблем с электроникой. Климат-контроль работает отлично. Подойдет для всех типов дорог. Просторный и уютный салон.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">44faa463-530a-4b4e-b63a-d827bbcd5878</column>
+            <column name="name">Ford Mondeo</column>
+            <column name="photo_link">https://s.auto.drom.ru/img1/catalog/photos/fullsize/ford/mondeo/ford_mondeo_27285.jpg</column>
+            <column name="description">Надежный автомобиль для работы и путешествий. Ходовая часть в отличном состоянии. Установлен новый аккумулятор. Машина регулярно обслуживалась.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">a71daa7c-4711-4bf2-9492-1f46957184d0</column>
+            <column name="name">Subaru Forester</column>
+            <column name="photo_link">https://www.ixbt.com/img/n1/news/2023/10/5/2025-subaru-forester-touring-exterior_large.jpg</column>
+            <column name="description">Прекрасный вариант для активного отдыха. Полный привод, все работает идеально. Салон чистый и ухоженный. Подвеска мягкая и надежная.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">50c62c6e-7e26-4715-816b-f550209ac726</column>
+            <column name="name">Volkswagen Tiguan</column>
+            <column name="photo_link">https://kolesa-uploads.ru/-/b0c4d792-ba3d-49b5-8c56-c506c8cd7040/volkswagen-tiguan-front2-mini.jpg</column>
+            <column name="description">Прошёл полную диагностику перед продажей. Идеально управляется и маневренен на дороге. Интерьер стильный и уютный. Обслуживался только у официального дилера.</column>
+        </insert>
+        <insert tableName="unit">
+            <column name="external_id">6f94a4c3-087f-4294-8c55-403d585641df</column>
+            <column name="name">Renault Duster</column>
+            <column name="photo_link">https://rg.ru/uploads/images/203/80/76/form_photoreport_imageid_571309_0605bd8788984fe1608013195.jpeg</column>
+            <column name="description">Универсальный автомобиль для любых дорожных условий. Все расходники заменены недавно. Батарея заряжается без проблем. Отличный клиренс для бездорожья.</column>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

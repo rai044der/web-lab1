@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/layout.js" defer></script>
+    <script src="js/admin_editor.js" defer></script>
+
+    <!--  daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--  daisy ui  -->
+</head>
+
+<body class="bg-base-100 text-base-content">
+
+<!-- Включение шапки -->
+<div id="header"></div>
+<!-- Включение шапки -->
+
+<main class="container py-4 flex-grow-1">
+    <div class="container mx-auto text-center p-10">
+        <h1 class="text-3xl font-bold">Редактирование меню</h1>
+    </div>
+
+    <button id="addUnitBtn" class="btn btn-info">Добавить</button>
+
+    <div class="overflow-x-auto">
+        <table class="table table-zebra">
+            <thead>
+            <tr>
+                <th>Название</th>
+                <th>Действия</th>
+            </tr>
+            </thead>
+            <tbody id="menu-table-body">
+            <!-- Здесь будут строки с меню -->
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<!-- Модальное окно -->
+<div id="editUnitModal" tabindex="-1" aria-labelledby="editUnitModalLabel" aria-hidden="true">
+    <dialog id="unit-modal" class="modal">
+        <div class="modal-box">
+            <h2 id="editUnitModalLabel" class="text-2xl font-bold mb-4">Редактировать</h2>
+
+            <input type="hidden" id="unitId">
+
+            <div class="mb-3">
+                <label for="unitName" class="block font-semibold">Название (обязательно)</label>
+                <input type="text" class="input input-bordered w-full" id="unitName" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="unitDescription" class="block font-semibold">Описание</label>
+                <textarea class="textarea textarea-bordered w-full" id="unitDescription" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="unitPhotoLink" class="block font-semibold">Ссылка на фото</label>
+                <input type="text" class="input input-bordered w-full" id="unitPhotoLink">
+            </div>
+
+            <div class="modal-action">
+                <form method="dialog">
+                    <button id="closeModalBtn" class="btn btn-secondary">Отмена</button>
+                </form>
+                <button class="btn btn-success" id="saveUnitBtn">Сохранить</button>
+            </div>
+        </div>
+    </dialog>
+</div>
+
+<!-- Включение подвала -->
+<div id="footer"></div>
+<!-- Включение подвала -->
+</body>
+</html>

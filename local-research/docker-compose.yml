@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_local
+    restart: no
+    environment:
+      POSTGRES_DB: cars_business_card
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+    ports:
+      - "5432:5432"
+    command: ["postgres", "-c", "log_statement=all"]
+    entrypoint: ["bash", "-c", "echo 'CREATE SCHEMA IF NOT EXISTS business_card_service;' > /docker-entrypoint-initdb.d/init-db.sql && docker-entrypoint.sh postgres"]
+
+volumes:
+  postgres_data: {}
