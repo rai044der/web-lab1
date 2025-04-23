@@ -34,7 +34,8 @@ public class SecurityConfiguration {
                 )
                 .formLogin(customizer -> customizer
                         .loginPage("/api/auth")
-                        .defaultSuccessUrl("/")
+                        .defaultSuccessUrl("/", true)
+                        .failureUrl("/auth.html")
                         .permitAll()
                 )
                 .logout(customizer -> customizer

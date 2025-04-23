@@ -2,6 +2,8 @@ package ru.abradox.carsbusinesscard.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -26,6 +28,7 @@ public class JpaUnitService implements UnitService {
     private final UnitMapper mapper;
 
     @Override
+    @Cacheable("units")
     public Optional<UnitDto> getByExternalId(UUID externalId) {
         log.info("Запрашиваю unit с externalId={}", externalId);
         var entity = repository.findByExternalId(externalId);
@@ -35,6 +38,7 @@ public class JpaUnitService implements UnitService {
     }
 
     @Override
+    @Cacheable("units")
     public List<UnitDto> getAll() {
         log.info("Запрашиваю все записи unit");
         var entities = repository.findAll();
@@ -44,6 +48,7 @@ public class JpaUnitService implements UnitService {
     }
 
     @Override
+    @CacheEvict(value = "units", allEntries = true)
     @Retryable(retryFor = Exception.class)
     @Transactional(isolation = Isolation.REPEATABLE_READ)
     public void update(UpdateUnitRequest request) {
@@ -59,6 +64,7 @@ public class JpaUnitService implements UnitService {
     }
 
     @Override
+    @CacheEvict(value = "units", allEntries = true)
     @Retryable(retryFor = Exception.class)
     public void create(CreateUnitRequest request) {
         var isAlreadyExist = repository.existsByName(request.getName());
@@ -73,6 +79,7 @@ public class JpaUnitService implements UnitService {
     }
 
     @Override
+    @CacheEvict(value = "units", allEntries = true)
     @Transactional
     public void delete(UUID externalId) {
         log.info("Удаляю unit с externalId={}", externalId);

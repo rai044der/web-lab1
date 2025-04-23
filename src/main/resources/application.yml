@@ -26,6 +26,8 @@ spring:
       name: admin
     cors:
       allowed-origins: ${BCS_CORS_ALLOWED_ORIGINS}
+  cache:
+    type: ${CACHE_TYPE:SIMPLE}
 
 logging:
   level:

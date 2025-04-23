@@ -11,6 +11,7 @@ function displayUnits(units) {
         const unitImage = document.createElement("img");
         unitImage.src = unit.photoLink;
         unitImage.alt = unit.name;
+        unitImage.loading = "lazy";
         unitImage.classList.add("w-full", "h-48", "object-cover");
         unitCard.appendChild(unitImage);
 
